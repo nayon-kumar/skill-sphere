@@ -30,18 +30,18 @@ const SmallMenu = () => {
               Home
             </Link>
             <Link
-              href="/apps"
+              href="/courses"
               onClick={() => setOpen(false)}
-              className={`block bg-black px-5 py-2 rounded-lg ${pathName === "/apps" ? "bg-gray-300" : ""}`}
+              className={`block bg-black px-5 py-2 rounded-lg ${pathName === "/courses" ? "bg-gray-300" : ""}`}
             >
-              Apps
+              Courses
             </Link>
             <Link
-              href="/installation"
+              href="/profile"
               onClick={() => setOpen(false)}
-              className={`block bg-black px-5 py-2 rounded-lg ${pathName === "/installation" ? "bg-gray-300" : ""}`}
+              className={`block bg-black px-5 py-2 rounded-lg ${pathName === "/profile" ? "bg-gray-300" : ""}`}
             >
-              Installation
+              My Profile
             </Link>
           </ul>
         </div>

@@ -1,10 +1,9 @@
 import logo from "@/assets/logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
-import NavLinks from "./NavLinks";
 import SmallMenu from "./SmallMenu";
 import MyContainer from "../MyContainer/MyContainer";
+import NavLinks from "./NavLinks";
 const Navbar = () => {
   return (
     <div className="shadow-lg fixed w-full bg-white z-20">
@@ -24,10 +23,20 @@ const Navbar = () => {
             </ul>
           </div>
           {/* Right side */}
-          <div>
-            <div className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold">
-              <FaGithub size={20} />
-              Contribute
+          <div className="flex items-center gap-4">
+            <div className="avatar">
+              <div className="w-10">
+                <Image
+                  src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp"
+                  alt="Profile"
+                  width={30}
+                  height={30}
+                  className="rounded-full"
+                />
+              </div>
+            </div>
+            <div className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white">
+              Logout
             </div>
           </div>
         </div>

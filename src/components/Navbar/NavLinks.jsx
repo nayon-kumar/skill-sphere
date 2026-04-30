@@ -17,18 +17,18 @@ const NavLinks = () => {
       </li>
       <li>
         <Link
-          href="/apps"
-          className={`${pathName === "/apps" ? "bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-transparent bg-clip-text underline underline-offset-8 decoration-[#632EE3]" : ""}`}
+          href="/courses"
+          className={`${pathName === "/courses" ? "bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-transparent bg-clip-text underline underline-offset-8 decoration-[#632EE3]" : ""}`}
         >
-          Apps
+          Courses
         </Link>
       </li>
       <li>
         <Link
-          href="/installation"
-          className={`${pathName === "/installation" ? "bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-transparent bg-clip-text underline underline-offset-8 decoration-[#632EE3]" : ""}`}
+          href="/profile"
+          className={`${pathName === "/profile" ? "bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-transparent bg-clip-text underline underline-offset-8 decoration-[#632EE3]" : ""}`}
         >
-          Installation
+          My Profile
         </Link>
       </li>
     </>
