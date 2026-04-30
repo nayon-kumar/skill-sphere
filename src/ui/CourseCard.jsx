@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const CourseCard = ({ course }) => {
   console.log(course);
@@ -6,26 +7,24 @@ const CourseCard = ({ course }) => {
     <div>
       <div
         key={course.id}
-        className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden"
+        className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden "
       >
         {/* Image */}
-        <Image
-          src={course.image}
-          alt={course.title}
-          width={40}
-          height={40}
-          className="w-full h-48 object-cover"
-        />
+        <div className="relative aspect-square">
+          <Image src={course.image} alt={course.title} fill className="" />
+        </div>
 
         {/* Content */}
         <div className="p-5">
-          <h3 className="text-xl font-semibold mb-2">{course.title}</h3>
+          <h3 className="text-xl line-clamp-1 font-semibold mb-2">
+            {course.title}
+          </h3>
 
           <p className="text-sm text-gray-500 mb-2">
             Instructor: {course.instructor}
           </p>
 
-          <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+          <p className="text-gray-600 text-sm mb-3 line-clamp-1">
             {course.description}
           </p>
 
@@ -43,9 +42,12 @@ const CourseCard = ({ course }) => {
               ⭐ {course.rating}
             </span>
 
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition">
-              Enroll
-            </button>
+            <Link
+              href="/"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition"
+            >
+              View Details
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import CourseCard from "@/ui/CourseCard";
 import React from "react";
 import MyContainer from "../MyContainer/MyContainer";
+import Link from "next/link";
+import { IoArrowForward } from "react-icons/io5";
 
 const getData = async () => {
   const res = await fetch("https://skill-sphere-pi-inky.vercel.app/data.json", {
@@ -26,6 +28,12 @@ const PopularCourses = async () => {
         {topCourses.map((course) => (
           <CourseCard key={course.id} course={course} />
         ))}
+      </div>
+      <div className="text-center mt-10">
+        <Link href="/courses" className="btn btn-primary">
+          Show All Courses
+          <IoArrowForward size={20} />
+        </Link>
       </div>
     </MyContainer>
   );
