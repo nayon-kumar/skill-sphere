@@ -7,7 +7,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch.",
-    "image": "https://i.postimg.cc/example-course1.png",
+    "image": "https://ibb.co.com/3YvkGcFh",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.7,
     "level": "Beginner",
     "description": "Master the fundamentals of user interface and user experience design.",
-    "image": "https://i.postimg.cc/example-course2.png",
+    "image": "https://ibb.co.com/Kjg6qrbr",
     "category": "Design"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.6,
     "level": "Intermediate",
     "description": "Learn SEO, social media marketing, and online branding strategies.",
-    "image": "https://i.postimg.cc/example-course3.png",
+    "image": "https://ibb.co.com/4wzMZn2x",
     "category": "Marketing"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.9,
     "level": "Advanced",
     "description": "Build scalable web applications using React and Next.js.",
-    "image": "https://i.postimg.cc/example-course4.png",
+    "image": "https://ibb.co.com/G4hs8Xvk",
     "category": "Development"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.8,
     "level": "Intermediate",
     "description": "Analyze data and build models using Python and popular libraries.",
-    "image": "https://i.postimg.cc/example-course5.png",
+    "image": "https://ibb.co.com/VWpBygpS",
     "category": "Data Science"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.5,
     "level": "Beginner",
     "description": "Learn the basics of graphic design, color theory, and typography.",
-    "image": "https://i.postimg.cc/example-course6.png",
+    "image": "https://ibb.co.com/fVzr2kNs",
     "category": "Design"
   }
 ]
