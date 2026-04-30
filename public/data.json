@@ -7,7 +7,7 @@
     "rating": 4.8,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch.",
-    "image": "https://ibb.co.com/3YvkGcFh",
+    "image": "https://i.ibb.co.com/Tq1rpt0h/Complete-Web-Development-Bootcamp.png",
     "category": "Development"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.7,
     "level": "Beginner",
     "description": "Master the fundamentals of user interface and user experience design.",
-    "image": "https://ibb.co.com/Kjg6qrbr",
+    "image": "https://i.ibb.co.com/sv4jwVbV/UI-UX-Design-Masterclass.jpg",
     "category": "Design"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.6,
     "level": "Intermediate",
     "description": "Learn SEO, social media marketing, and online branding strategies.",
-    "image": "https://ibb.co.com/4wzMZn2x",
+    "image": "https://i.ibb.co.com/twgcMTz5/Digital-Marketing-Essentials.jpg",
     "category": "Marketing"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.9,
     "level": "Advanced",
     "description": "Build scalable web applications using React and Next.js.",
-    "image": "https://ibb.co.com/G4hs8Xvk",
+    "image": "https://i.ibb.co.com/bMfHCxgL/React-Next-js-Advanced-Guide.png",
     "category": "Development"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.8,
     "level": "Intermediate",
     "description": "Analyze data and build models using Python and popular libraries.",
-    "image": "https://ibb.co.com/VWpBygpS",
+    "image": "https://i.ibb.co.com/DDgKX9gC/Python-for-Data-Science.jpg",
     "category": "Data Science"
   },
   {
@@ -62,7 +62,7 @@
     "rating": 4.5,
     "level": "Beginner",
     "description": "Learn the basics of graphic design, color theory, and typography.",
-    "image": "https://ibb.co.com/fVzr2kNs",
+    "image": "https://i.ibb.co.com/LDX98xg3/Graphic-Design-Fundamentals.jpg",
     "category": "Design"
   }
 ]

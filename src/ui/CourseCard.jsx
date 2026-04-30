@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 const CourseCard = ({ course }) => {
+  console.log(course);
   return (
     <div>
       <div

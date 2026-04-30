@@ -3,7 +3,9 @@ import React from "react";
 import MyContainer from "../MyContainer/MyContainer";
 
 const getData = async () => {
-  const res = await fetch("https://skill-sphere-pi-inky.vercel.app/data.json");
+  const res = await fetch("https://skill-sphere-pi-inky.vercel.app/data.json", {
+    cache: "no-store",
+  });
   return res.json();
 };
 
