@@ -6,7 +6,7 @@ import MyContainer from "../MyContainer/MyContainer";
 import NavLinks from "./NavLinks";
 const Navbar = () => {
   return (
-    <div className="shadow-lg fixed w-full bg-white z-20">
+    <div className="shadow-lg fixed w-full bg-[#F9FBFD] z-20">
       <MyContainer>
         <div className="py-5 flex sm:gap-5 items-center justify-between">
           {/* Left side */}
