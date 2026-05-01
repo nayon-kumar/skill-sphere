@@ -35,9 +35,7 @@ const Navbar = () => {
                 />
               </div>
             </div>
-            <div className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white">
-              Logout
-            </div>
+            <div className="btn btn-primary">Logout</div>
           </div>
         </div>
       </MyContainer>

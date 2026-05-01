@@ -25,7 +25,7 @@ const CoursesPage = async () => {
           />
           <button className="btn">Search</button>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10 pb-20">
           {courses.map((course) => (
             <CourseCard key={course.id} course={course} />
           ))}

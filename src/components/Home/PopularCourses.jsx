@@ -13,16 +13,18 @@ const getData = async () => {
 
 const PopularCourses = async () => {
   const courses = await getData();
-  console.log(courses);
   const topCourses = [...courses]
     .sort((a, b) => b.rating - a.rating)
     .slice(0, 3);
 
   return (
-    <MyContainer className="py-15">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+    <MyContainer className="py-20">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
         Popular Courses
       </h2>
+      <p className="text-gray-500 mt-2 mb-8 text-center">
+        Explore top-rated courses chosen by learners worldwide
+      </p>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {topCourses.map((course) => (

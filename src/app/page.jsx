@@ -1,5 +1,7 @@
 import Hero from "@/components/Home/Hero";
+import LearningTips from "@/components/Home/LearningTips";
 import PopularCourses from "@/components/Home/PopularCourses";
+import TopInstructors from "@/components/Home/TopInstructors";
 
 export default function Home() {
   return (
@@ -7,6 +9,8 @@ export default function Home() {
       <main className="pt-22">
         <Hero />
         <PopularCourses />
+        <LearningTips />
+        <TopInstructors />
       </main>
     </div>
   );
