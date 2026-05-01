@@ -1,7 +1,7 @@
 "use client";
 import MyContainer from "@/components/MyContainer/MyContainer";
 import Image from "next/image";
-import { FaStar, FaClock, FaUser } from "react-icons/fa";
+import { FaStar, FaClock, FaUser, FaCheck } from "react-icons/fa";
 
 const course = {
   id: 1,
@@ -17,10 +17,10 @@ const course = {
 
 const CourseDetailsPage = () => {
   return (
-    <MyContainer className="pt-42 pb-20">
+    <MyContainer className="pt-40 pb-20">
       <div className="rounded-2xl shadow-xl p-5 border-2 border-gray-300">
         {/* Top Section */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 items-center gap-6">
           {/* Image */}
           <div className="relative aspect-video">
             <Image
@@ -78,10 +78,46 @@ const CourseDetailsPage = () => {
         <div className="p-6">
           <h2 className="text-xl font-semibold mb-3">What you'll learn</h2>
           <ul className="grid md:grid-cols-2 gap-3 text-gray-600 text-sm">
-            <li>✔ Build full-stack applications</li>
-            <li>✔ Master HTML, CSS, JavaScript</li>
-            <li>✔ Learn React & backend basics</li>
-            <li>✔ Deploy real-world projects</li>
+            <li className="flex items-center gap-2">
+              {" "}
+              <FaCheck className="text-green-500" />{" "}
+              <p>Build full-stack applications</p>
+            </li>
+            <li className="flex items-center gap-2">
+              {" "}
+              <FaCheck className="text-green-500" />{" "}
+              <p>Master HTML, CSS, JavaScript</p>
+            </li>
+            <li className="flex items-center gap-2">
+              {" "}
+              <FaCheck className="text-green-500" />{" "}
+              <p>Learn React & backend basics</p>
+            </li>
+            <li className="flex items-center gap-2">
+              {" "}
+              <FaCheck className="text-green-500" />{" "}
+              <p>Deploy real-world projects</p>
+            </li>
+            <li className="flex items-center gap-2">
+              {" "}
+              <FaCheck className="text-green-500" />{" "}
+              <p>Understand REST APIs & integration</p>
+            </li>
+            <li className="flex items-center gap-2">
+              {" "}
+              <FaCheck className="text-green-500" />{" "}
+              <p>Work with databases like MongoDB</p>
+            </li>
+            <li className="flex items-center gap-2">
+              {" "}
+              <FaCheck className="text-green-500" />{" "}
+              <p>Implement authentication & security</p>
+            </li>
+            <li className="flex items-center gap-2">
+              {" "}
+              <FaCheck className="text-green-500" />{" "}
+              <p>Optimize performance & best practices</p>
+            </li>
           </ul>
         </div>
       </div>
