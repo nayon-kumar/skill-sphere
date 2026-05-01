@@ -45,7 +45,7 @@ const TopInstructors = () => {
   return (
     <MyContainer className="py-16">
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
           Top Instructors
         </h2>
         <p className="text-gray-500 mt-2">
