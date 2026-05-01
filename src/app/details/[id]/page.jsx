@@ -1,21 +1,18 @@
-"use client";
 import MyContainer from "@/components/MyContainer/MyContainer";
 import Image from "next/image";
 import { FaStar, FaClock, FaUser, FaCheck } from "react-icons/fa";
 
-const course = {
-  id: 1,
-  title: "Complete Web Development Bootcamp",
-  instructor: "John Doe",
-  duration: "20 hours",
-  rating: 4.8,
-  level: "Beginner",
-  description: "Learn full-stack web development from scratch.",
-  image: "https://i.ibb.co.com/Tq1rpt0h/Complete-Web-Development-Bootcamp.png",
-  category: "Development",
+const getData = async () => {
+  const res = await fetch("https://skill-sphere-pi-inky.vercel.app/data.json", {
+    cache: "no-store",
+  });
+  return res.json();
 };
 
-const CourseDetailsPage = () => {
+const CourseDetailsPage = async ({ params }) => {
+  const { id } = await params;
+  const allData = await getData();
+  const course = allData.find((singleData) => singleData.id == id);
   return (
     <MyContainer className="pt-40 pb-20">
       <div className="rounded-2xl shadow-xl p-5 border-2 border-gray-300">
