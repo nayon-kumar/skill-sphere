@@ -26,7 +26,7 @@ const PopularCourses = async () => {
         Explore top-rated courses chosen by learners worldwide
       </p>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {topCourses.map((course) => (
           <CourseCard key={course.id} course={course} />
         ))}

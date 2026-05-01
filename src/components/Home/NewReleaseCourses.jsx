@@ -21,10 +21,10 @@ const NewReleaseCourses = async () => {
         New Release Courses
       </h2>
       <p className="text-gray-500 mt-2 mb-8 text-center">
-        Explore top-rated courses chosen by learners worldwide
+        Discover the latest courses freshly added to our platform
       </p>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {newCourses.map((course) => (
           <CourseCard key={course.id} course={course} />
         ))}
