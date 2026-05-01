@@ -17,22 +17,22 @@ const course = {
 
 const CourseDetailsPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-4 md:px-10 pt-40">
-      <MyContainer className="rounded-2xl shadow-lg overflow-hidden">
+    <MyContainer className="pt-42 pb-20">
+      <div className="rounded-2xl shadow-xl p-5 border-2 border-gray-300">
         {/* Top Section */}
         <div className="grid md:grid-cols-2 gap-6">
           {/* Image */}
-          <div className="relative w-full h-[250px] md:h-full">
+          <div className="relative aspect-video">
             <Image
               src={course.image}
               alt={course.title}
               fill
-              className="object-cover"
+              className="object-cover rounded-2xl"
             />
           </div>
 
           {/* Content */}
-          <div className="p-6 flex flex-col justify-between">
+          <div className="flex flex-col justify-between">
             <div>
               <span className="inline-block bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full mb-3">
                 {course.category}
@@ -75,7 +75,7 @@ const CourseDetailsPage = () => {
         </div>
 
         {/* Extra Section */}
-        <div className="p-6 border-t">
+        <div className="p-6">
           <h2 className="text-xl font-semibold mb-3">What you'll learn</h2>
           <ul className="grid md:grid-cols-2 gap-3 text-gray-600 text-sm">
             <li>✔ Build full-stack applications</li>
@@ -84,8 +84,8 @@ const CourseDetailsPage = () => {
             <li>✔ Deploy real-world projects</li>
           </ul>
         </div>
-      </MyContainer>
-    </div>
+      </div>
+    </MyContainer>
   );
 };
 

@@ -8,7 +8,7 @@ const CourseCard = ({ course }) => {
         key={course.id}
         className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden "
       >
-        <div className="relative aspect-square">
+        <div className="relative aspect-video">
           <Image src={course.image} alt={course.title} fill className="" />
         </div>
 
