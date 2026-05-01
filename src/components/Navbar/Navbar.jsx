@@ -35,7 +35,10 @@ const Navbar = () => {
                 />
               </div>
             </div>
-            <div className="btn btn-primary">Logout</div>
+            {/* <div className="btn btn-primary">Logout</div> */}
+            <Link href="/auth/signin" className="btn btn-primary">
+              Login
+            </Link>
           </div>
         </div>
       </MyContainer>

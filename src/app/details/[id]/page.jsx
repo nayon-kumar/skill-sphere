@@ -14,7 +14,7 @@ const CourseDetailsPage = async ({ params }) => {
   const allData = await getData();
   const course = allData.find((singleData) => singleData.id == id);
   return (
-    <MyContainer className="pt-40 pb-20">
+    <MyContainer className="pt-38 pb-20">
       <div className="rounded-2xl shadow-xl p-5 border-2 border-gray-300">
         {/* Top Section */}
         <div className="grid md:grid-cols-2 items-center gap-6">
