@@ -128,7 +128,7 @@ const SignInPage = () => {
           Login with Google
         </button>
         <p className="text-center font-semibold text-[#706F6F] mt-7">
-          Don't Have An Account ?{" "}
+          Don't have an account ?{" "}
           <Link
             href="/auth/signup"
             className="bg-linear-to-r from-[#FF8C47] to-[#F75B5F] text-transparent bg-clip-text"

@@ -158,7 +158,7 @@ const SignUpPage = () => {
           Register with Google
         </button>
         <p className="text-center font-semibold text-[#706F6F] mt-7">
-          Already Have An Account ?{" "}
+          Already have an account ?{" "}
           <Link
             href="/auth/signin"
             className="bg-linear-to-r from-[#FF8C47] to-[#F75B5F] text-transparent bg-clip-text"

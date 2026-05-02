@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 const Hero = () => {
   return (
     <section className="relative max-w-7xl mx-auto h-screen overflow-hidden">
@@ -30,13 +32,19 @@ const Hero = () => {
           </p>
 
           <div className="flex justify-center gap-4">
-            <button className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg font-semibold transition cursor-pointer">
+            <Link
+              href="/courses"
+              className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg font-semibold transition cursor-pointer"
+            >
               Get Started
-            </button>
+            </Link>
 
-            <button className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition cursor-pointer">
+            <Link
+              href="#learningTips"
+              className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition cursor-pointer"
+            >
               Learn More
-            </button>
+            </Link>
           </div>
         </div>
       </div>

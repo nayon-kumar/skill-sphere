@@ -31,7 +31,10 @@ const learningData = [
 const LearningTips = () => {
   return (
     <MyContainer className="pb-15">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
+      <h2
+        id="learningTips"
+        className="text-2xl md:text-3xl font-bold text-center mb-4"
+      >
         Learning Tips
       </h2>
       <p className="text-gray-500 text-center mb-10">

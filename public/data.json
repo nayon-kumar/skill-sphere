@@ -8,7 +8,17 @@
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch.",
     "image": "https://i.ibb.co.com/Tq1rpt0h/Complete-Web-Development-Bootcamp.png",
-    "category": "Development"
+    "category": "Development",
+    "learn": [
+      "Build full-stack applications",
+      "Master HTML, CSS, JavaScript",
+      "Learn React & backend basics",
+      "Deploy real-world projects",
+      "Understand REST APIs & integration",
+      "Work with databases like MongoDB",
+      "Implement authentication & security",
+      "Optimize performance & best practices"
+    ]
   },
   {
     "id": 2,
@@ -19,7 +29,17 @@
     "level": "Beginner",
     "description": "Master the fundamentals of user interface and user experience design.",
     "image": "https://i.ibb.co.com/sv4jwVbV/UI-UX-Design-Masterclass.jpg",
-    "category": "Design"
+    "category": "Design",
+    "learn": [
+      "Understand UI/UX design principles",
+      "Create user-centered designs",
+      "Learn wireframing techniques",
+      "Build interactive prototypes",
+      "Master Figma tools & workflow",
+      "Conduct user research effectively",
+      "Design modern mobile & web interfaces",
+      "Improve usability and accessibility"
+    ]
   },
   {
     "id": 3,
@@ -30,7 +50,17 @@
     "level": "Intermediate",
     "description": "Learn SEO, social media marketing, and online branding strategies.",
     "image": "https://i.ibb.co.com/twgcMTz5/Digital-Marketing-Essentials.jpg",
-    "category": "Marketing"
+    "category": "Marketing",
+    "learn": [
+      "Master SEO fundamentals",
+      "Run effective social media campaigns",
+      "Understand Google Ads & PPC",
+      "Build strong brand identity online",
+      "Learn content marketing strategies",
+      "Analyze marketing performance data",
+      "Grow audience engagement organically",
+      "Develop conversion optimization skills"
+    ]
   },
   {
     "id": 4,
@@ -41,7 +71,17 @@
     "level": "Advanced",
     "description": "Build scalable web applications using React and Next.js.",
     "image": "https://i.ibb.co.com/bMfHCxgL/React-Next-js-Advanced-Guide.png",
-    "category": "Development"
+    "category": "Development",
+    "learn": [
+      "Build advanced React applications",
+      "Master Next.js routing system",
+      "Implement server-side rendering (SSR)",
+      "Use API routes in Next.js",
+      "Optimize React performance",
+      "Manage state with Redux & Context API",
+      "Deploy scalable full-stack apps",
+      "Work with TypeScript in React projects"
+    ]
   },
   {
     "id": 5,
@@ -52,7 +92,17 @@
     "level": "Intermediate",
     "description": "Analyze data and build models using Python and popular libraries.",
     "image": "https://i.ibb.co.com/DDgKX9gC/Python-for-Data-Science.jpg",
-    "category": "Data Science"
+    "category": "Data Science",
+    "learn": [
+      "Learn Python programming basics",
+      "Work with NumPy & Pandas",
+      "Visualize data using Matplotlib",
+      "Clean and preprocess datasets",
+      "Build machine learning models",
+      "Understand statistics for data science",
+      "Perform data analysis projects",
+      "Handle real-world datasets efficiently"
+    ]
   },
   {
     "id": 6,
@@ -63,6 +113,16 @@
     "level": "Beginner",
     "description": "Learn the basics of graphic design, color theory, and typography.",
     "image": "https://i.ibb.co.com/LDX98xg3/Graphic-Design-Fundamentals.jpg",
-    "category": "Design"
+    "category": "Design",
+    "learn": [
+      "Understand design principles",
+      "Master color theory basics",
+      "Learn typography fundamentals",
+      "Create eye-catching layouts",
+      "Use Adobe Photoshop effectively",
+      "Design logos and branding assets",
+      "Improve visual storytelling skills",
+      "Build a professional design portfolio"
+    ]
   }
 ]
