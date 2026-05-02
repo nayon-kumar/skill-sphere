@@ -5,6 +5,7 @@ import Image from "next/image";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { FaUserCircle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const ProfilePage = () => {
   const { data: session } = authClient.useSession();
@@ -15,8 +16,14 @@ const ProfilePage = () => {
     formState: { errors },
   } = useForm();
 
-  const editProfile = (data) => {
-    console.log(data);
+  const editProfile = async (data) => {
+    await authClient.updateUser({
+      image: data.image,
+      name: data.name,
+    });
+    toast.success("Profile Edited Successfully!", {
+      position: "bottom-center",
+    });
     document.getElementById("my_modal_1").close();
   };
 
