@@ -97,6 +97,7 @@ const ProfilePage = () => {
                   message: "URL must start with http:// or https://",
                 },
               })}
+              defaultValue={session?.user?.image}
               type="text"
               className="input w-full"
             />

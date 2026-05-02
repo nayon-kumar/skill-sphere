@@ -30,7 +30,11 @@ const SignInPage = () => {
     }
   };
 
-  const handleGoogleSignIn = () => {};
+  const handleGoogleSignIn = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+  };
 
   return (
     <MyContainer className="pt-38 pb-20">
