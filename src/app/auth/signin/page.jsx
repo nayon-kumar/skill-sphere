@@ -1,10 +1,12 @@
 "use client";
 
 import MyContainer from "@/components/MyContainer/MyContainer";
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const SignInPage = () => {
   const [isShowPass, setIsShowPass] = useState(false);
@@ -15,17 +17,17 @@ const SignInPage = () => {
   } = useForm();
 
   const handleLogin = async (data) => {
-    // const { data: newData, error } = await authClient.signIn.email({
-    //   email: data.email,
-    //   password: data.password,
-    //   rememberMe: true,
-    //   callbackURL: "/",
-    // });
-    // if (error) {
-    //   toast.error(error.message, { position: "bottom-center" });
-    // } else {
-    //   toast.success("Sign in successfully!", { position: "bottom-center" });
-    // }
+    const { data: newData, error } = await authClient.signIn.email({
+      email: data.email,
+      password: data.password,
+      rememberMe: true,
+      callbackURL: "/",
+    });
+    if (error) {
+      toast.error(error.message, { position: "bottom-center" });
+    } else {
+      toast.success("Sign in successfully!", { position: "bottom-center" });
+    }
   };
 
   const handleGoogleSignIn = () => {};
@@ -39,7 +41,7 @@ const SignInPage = () => {
         <form onSubmit={handleSubmit(handleLogin)}>
           <fieldset className="fieldset ">
             <label className="label font-semibold text-lg text-[#403F3F] mt-8">
-              Email address
+              Email Address*
             </label>
             <input
               {...register("email", {
@@ -58,7 +60,7 @@ const SignInPage = () => {
             )}
 
             <label className="label font-semibold text-lg mt-4 text-[#403F3F]">
-              Password
+              Password*
             </label>
             <div className="mt-2">
               <div className="input w-full">
@@ -68,6 +70,12 @@ const SignInPage = () => {
                     minLength: {
                       value: 8,
                       message: "Password must be at least 8 characters",
+                    },
+                    pattern: {
+                      value:
+                        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).+$/,
+                      message:
+                        "Password must include uppercase, lowercase, number, and special character",
                     },
                   })}
                   type={isShowPass ? "text" : "password"}
@@ -92,7 +100,7 @@ const SignInPage = () => {
           </fieldset>
         </form>
 
-        <div className="divider text-[#706F6F] my-6">Or login with</div>
+        <div className="divider text-[#706F6F] my-6">Or continue with</div>
         {/* Google */}
         <button
           onClick={handleGoogleSignIn}
@@ -125,7 +133,7 @@ const SignInPage = () => {
               ></path>
             </g>
           </svg>
-          Login with Google
+          Continue with Google
         </button>
         <p className="text-center font-semibold text-[#706F6F] mt-7">
           Don't have an account ?{" "}
