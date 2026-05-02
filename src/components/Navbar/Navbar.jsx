@@ -1,10 +1,15 @@
+"use client";
 import logo from "@/assets/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import SmallMenu from "./SmallMenu";
 import MyContainer from "../MyContainer/MyContainer";
 import NavLinks from "./NavLinks";
+import { authClient } from "@/lib/auth-client";
+import { FaUserCircle } from "react-icons/fa";
 const Navbar = () => {
+  const { data: session } = authClient.useSession();
+  const imageSrc = session?.user?.image?.trim();
   return (
     <div className="shadow-lg fixed w-full bg-[#F9FBFD] z-20">
       <MyContainer>
@@ -24,21 +29,38 @@ const Navbar = () => {
           </div>
           {/* Right side */}
           <div className="flex items-center gap-4">
-            <div className="avatar">
-              <div className="w-10">
-                <Image
-                  src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp"
-                  alt="Profile"
-                  width={30}
-                  height={30}
-                  className="rounded-full"
-                />
+            {session?.user ? (
+              <>
+                {imageSrc ? (
+                  <div className="w-10 h-10 relative rounded-full overflow-hidden">
+                    <Image
+                      src={imageSrc}
+                      alt="Profile"
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
+                ) : (
+                  <FaUserCircle size={35} />
+                )}
+              </>
+            ) : (
+              <></>
+            )}
+
+            {session?.user ? (
+              <div
+                onClick={async () => await authClient.signOut()}
+                className="btn btn-primary"
+              >
+                Logout
               </div>
-            </div>
-            {/* <div className="btn btn-primary">Logout</div> */}
-            <Link href="/auth/signin" className="btn btn-primary">
-              Login
-            </Link>
+            ) : (
+              <Link href="/auth/signin" className="btn btn-primary">
+                Login
+              </Link>
+            )}
           </div>
         </div>
       </MyContainer>

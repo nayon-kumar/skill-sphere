@@ -3,7 +3,7 @@
 import MyContainer from "@/components/MyContainer/MyContainer";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -11,6 +11,7 @@ import { toast } from "react-toastify";
 
 const SignUpPage = () => {
   const [isShowPass, setIsShowPass] = useState(false);
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -28,8 +29,9 @@ const SignUpPage = () => {
     if (error) {
       toast.error(error.message, { position: "bottom-center" });
     } else {
+      await authClient.signOut();
       toast.success("Sign up successfully!", { position: "bottom-center" });
-      redirect("/auth/signin");
+      router.push("/auth/signin");
     }
   };
 
