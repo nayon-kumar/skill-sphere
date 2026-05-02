@@ -75,46 +75,12 @@ const CourseDetailsPage = async ({ params }) => {
         <div className="p-6">
           <h2 className="text-xl font-semibold mb-3">What you'll learn</h2>
           <ul className="grid md:grid-cols-2 gap-3 text-gray-600 text-sm">
-            <li className="flex items-center gap-2">
-              {" "}
-              <FaCheck className="text-green-500" />{" "}
-              <p>Build full-stack applications</p>
-            </li>
-            <li className="flex items-center gap-2">
-              {" "}
-              <FaCheck className="text-green-500" />{" "}
-              <p>Master HTML, CSS, JavaScript</p>
-            </li>
-            <li className="flex items-center gap-2">
-              {" "}
-              <FaCheck className="text-green-500" />{" "}
-              <p>Learn React & backend basics</p>
-            </li>
-            <li className="flex items-center gap-2">
-              {" "}
-              <FaCheck className="text-green-500" />{" "}
-              <p>Deploy real-world projects</p>
-            </li>
-            <li className="flex items-center gap-2">
-              {" "}
-              <FaCheck className="text-green-500" />{" "}
-              <p>Understand REST APIs & integration</p>
-            </li>
-            <li className="flex items-center gap-2">
-              {" "}
-              <FaCheck className="text-green-500" />{" "}
-              <p>Work with databases like MongoDB</p>
-            </li>
-            <li className="flex items-center gap-2">
-              {" "}
-              <FaCheck className="text-green-500" />{" "}
-              <p>Implement authentication & security</p>
-            </li>
-            <li className="flex items-center gap-2">
-              {" "}
-              <FaCheck className="text-green-500" />{" "}
-              <p>Optimize performance & best practices</p>
-            </li>
+            {course.learn.map((singleLearn, index) => (
+              <li key={index} className="flex items-center gap-2">
+                {" "}
+                <FaCheck className="text-green-500" /> <p>{singleLearn}</p>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
