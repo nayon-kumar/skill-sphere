@@ -1,6 +1,7 @@
 import SearchBox from "@/components/Courses/SearchBox";
 import MyContainer from "@/components/MyContainer/MyContainer";
 import CourseCard from "@/ui/CourseCard";
+import { FaBookReader } from "react-icons/fa";
 
 const getData = async () => {
   const res = await fetch("https://skill-sphere-pi-inky.vercel.app/data.json", {
@@ -24,11 +25,20 @@ const CoursesPage = async ({ searchParams }) => {
           All Courses
         </h2>
         <SearchBox />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10 pb-20">
-          {filteredCourse.map((course) => (
-            <CourseCard key={course.id} course={course} />
-          ))}
-        </div>
+        {filteredCourse.length > 0 ? (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10 pb-20">
+            {filteredCourse.map((course) => (
+              <CourseCard key={course.id} course={course} />
+            ))}
+          </div>
+        ) : (
+          <div className="flex flex-col text-gray-500 items-center justify-center py-20">
+            <FaBookReader size={120} />
+            <p className="mt-4 text-center">
+              No course found for your search. Try to search others course.
+            </p>
+          </div>
+        )}
       </MyContainer>
     </div>
   );
