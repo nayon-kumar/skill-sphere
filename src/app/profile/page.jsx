@@ -144,27 +144,29 @@ const ProfilePage = () => {
         </MyContainer>
       </motion.div>
       <div>
-        <MyContainer className="pb-20">
-          <h2 className="text-2xl md:text-3xl font-bold text-center pb-10">
-            Your Enrolled Courses
-          </h2>
+        {session?.user && (
+          <MyContainer className="pb-20">
+            <h2 className="text-2xl md:text-3xl font-bold text-center pb-10">
+              Your Enrolled Courses
+            </h2>
 
-          {enrolledCourses.length > 0 ? (
-            <div className="flex flex-col gap-6">
-              {enrolledCourses.map((course) => (
-                <EnrolledCard key={course.id} course={course} />
-              ))}
-            </div>
-          ) : (
-            <div className="flex flex-col text-gray-500 items-center justify-center py-20">
-              <FaBookReader size={120} />
-              <p className="mt-4 text-center">
-                Your did not enrolled any course. Go to courses tab for enroll
-                your favourite courses.
-              </p>
-            </div>
-          )}
-        </MyContainer>
+            {enrolledCourses.length > 0 ? (
+              <div className="flex flex-col gap-6">
+                {enrolledCourses.map((course) => (
+                  <EnrolledCard key={course.id} course={course} />
+                ))}
+              </div>
+            ) : (
+              <div className="flex flex-col text-gray-500 items-center justify-center py-20">
+                <FaBookReader size={120} />
+                <p className="mt-4 text-center">
+                  Your did not enrolled any course. Go to courses tab for enroll
+                  your favourite courses.
+                </p>
+              </div>
+            )}
+          </MyContainer>
+        )}
       </div>
     </>
   );

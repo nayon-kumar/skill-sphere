@@ -2,6 +2,7 @@ import { myContext } from "@/context/CourseContext";
 import Image from "next/image";
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -12,6 +13,9 @@ const EnrolledCard = ({ course }) => {
   const { enrolledCourses, setEnrolledCourses } = useContext(myContext);
 
   const handleUnenroll = () => {
+    toast.warn(`Unenrolled Course ${course.title}`, {
+      position: "bottom-center",
+    });
     const updatedCourses = enrolledCourses.filter((c) => c.id !== course.id);
     setEnrolledCourses(updatedCourses);
   };
@@ -49,7 +53,7 @@ const EnrolledCard = ({ course }) => {
         <div className="w-full sm:w-auto flex justify-center sm:justify-end">
           <button
             onClick={handleUnenroll}
-            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 w-full sm:w-auto"
+            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 w-full sm:w-auto cursor-pointer"
           >
             Unenroll
           </button>
