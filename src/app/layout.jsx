@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { ToastContainer } from "react-toastify";
 import ScrollProgressBar from "@/components/Motion/ScrollProgressBar";
+import Provider from "@/lib/providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,11 +35,13 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body suppressHydrationWarning>
-        <ScrollProgressBar />
-        <Navbar />
-        {children}
-        <Footer />
-        <ToastContainer />
+        <Provider>
+          <ScrollProgressBar />
+          <Navbar />
+          {children}
+          <Footer />
+          <ToastContainer />
+        </Provider>
       </body>
     </html>
   );

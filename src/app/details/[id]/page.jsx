@@ -1,4 +1,5 @@
 import MyContainer from "@/components/MyContainer/MyContainer";
+import EnrollButton from "@/ui/EnrollButton";
 import Image from "next/image";
 import { FaStar, FaClock, FaUser, FaCheck } from "react-icons/fa";
 
@@ -65,9 +66,7 @@ const CourseDetailsPage = async ({ params }) => {
             </div>
 
             {/* Button */}
-            <button className="mt-4 bg-blue-600 hover:bg-blue-700 transition text-white py-3 rounded-xl font-semibold">
-              Enroll Now
-            </button>
+            <EnrollButton course={course} />
           </div>
         </div>
 
