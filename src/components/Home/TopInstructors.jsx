@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { FaStar, FaUsers, FaBookOpen } from "react-icons/fa";
 import MyContainer from "../MyContainer/MyContainer";
+import { motion } from "framer-motion";
 
 const instructors = [
   {
@@ -55,9 +58,13 @@ const TopInstructors = () => {
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {instructors.map((ins) => (
-          <div
+          <motion.div
             key={ins.id}
-            className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden border border-gray-100 "
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden border border-gray-100"
           >
             <div className="relative aspect-square">
               <Image
@@ -106,7 +113,7 @@ const TopInstructors = () => {
                 Experience: {ins.experience}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </MyContainer>

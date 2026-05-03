@@ -1,5 +1,14 @@
+"use client";
+
 import React from "react";
 import MyContainer from "../MyContainer/MyContainer";
+import { motion } from "framer-motion";
+
+// ✅ Step 1: Define variants outside
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const learningData = [
   {
@@ -31,19 +40,23 @@ const learningData = [
 const LearningTips = () => {
   return (
     <MyContainer className="pb-15">
-      <h2
-        id="learningTips"
-        className="text-2xl md:text-3xl font-bold text-center mb-4"
-      >
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
         Learning Tips
       </h2>
+
       <p className="text-gray-500 text-center mb-10">
         Simple strategies to boost your learning journey
       </p>
+
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {learningData.map((learn) => (
-          <div
+          <motion.div
             key={learn.id}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
             className="group bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100"
           >
             <div className="text-4xl mb-4">{learn.icon}</div>
@@ -59,7 +72,7 @@ const LearningTips = () => {
             <p className="text-gray-600 text-sm leading-relaxed">
               {learn.description}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </MyContainer>

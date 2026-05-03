@@ -1,13 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const CourseCard = ({ course }) => {
   return (
-    <div>
-      <div
-        key={course.id}
-        className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden "
-      >
+    <motion.div
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
         <div className="relative aspect-video">
           <Image
             src={course.image}
@@ -53,7 +64,7 @@ const CourseCard = ({ course }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
