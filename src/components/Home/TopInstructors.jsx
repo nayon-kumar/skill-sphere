@@ -64,6 +64,9 @@ const TopInstructors = () => {
                 src={ins.image}
                 alt={ins.name}
                 fill
+                sizes="(max-width: 640px) 100vw, 
+         (max-width: 1024px) 50vw, 
+         33vw"
                 className="w-full h-56 object-cover"
               />
               <span className="absolute top-4 left-4 bg-indigo-600 text-white text-xs px-3 py-1 rounded-full">

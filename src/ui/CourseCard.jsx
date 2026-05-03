@@ -9,7 +9,14 @@ const CourseCard = ({ course }) => {
         className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden "
       >
         <div className="relative aspect-video">
-          <Image src={course.image} alt={course.title} fill className="" />
+          <Image
+            src={course.image}
+            alt={course.title}
+            fill
+            sizes="(max-width: 640px) 100vw, 
+         (max-width: 1024px) 50vw, 
+         33vw"
+          />
         </div>
 
         <div className="p-5">

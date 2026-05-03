@@ -31,7 +31,7 @@ const ProfilePage = () => {
     <MyContainer className="pt-35 pb-20">
       {session?.user && (
         <div className="border-2 border-gray-300 shadow-xl rounded-2xl p-6 flex flex-wrap justify-center  sm:justify-between gap-6">
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             {imageSrc ? (
               <Image
                 src={imageSrc}

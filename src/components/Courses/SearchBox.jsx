@@ -19,7 +19,6 @@ const SearchBox = () => {
     router.push(`?${params.toString()}`);
   };
 
-  console.log(search);
   return (
     <div className="flex items-center justify-center">
       <input

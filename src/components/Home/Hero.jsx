@@ -18,7 +18,7 @@ const Hero = () => {
 
       <div className="absolute inset-0 bg-black/60"></div>
 
-      <div className="relative z-10 flex items-center justify-center h-full text-center px-4">
+      <div className="relative z-10 flex items-center justify-center h-full text-center px-4 animate__animated animate__fadeInUp">
         <div className="max-w-3xl text-white">
           <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4">
             Online <span className="text-[#008BA0]">Courses</span> For Creative

@@ -26,7 +26,7 @@ const CoursesPage = async ({ searchParams }) => {
         </h2>
         <SearchBox />
         {filteredCourse.length > 0 ? (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10 pb-20">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10 pb-20 animate__animated animate__fadeInUp">
             {filteredCourse.map((course) => (
               <CourseCard key={course.id} course={course} />
             ))}
