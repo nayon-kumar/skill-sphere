@@ -33,16 +33,20 @@ const Navbar = () => {
               <>
                 {imageSrc ? (
                   <div className="w-10 h-10 relative rounded-full overflow-hidden">
-                    <Image
-                      src={imageSrc}
-                      alt="Profile"
-                      fill
-                      className="object-cover"
-                      unoptimized
-                    />
+                    <Link href="/profile">
+                      <Image
+                        src={imageSrc}
+                        alt="Profile"
+                        fill
+                        className="object-cover"
+                        unoptimized
+                      />
+                    </Link>
                   </div>
                 ) : (
-                  <FaUserCircle size={35} />
+                  <Link href="/profile">
+                    <FaUserCircle size={35} />
+                  </Link>
                 )}
               </>
             ) : (
