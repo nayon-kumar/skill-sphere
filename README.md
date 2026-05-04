@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📚 SkillSphere - Online Learning Platform
 
-## Getting Started
+SkillSphere is a modern **E-learning web application** built with Next.js that allows users to explore courses, view details, enroll in courses, and manage their learning journey.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+👉 https://skill-sphere-pi-inky.vercel.app/
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧑‍💻 Technologies Used
 
-## Learn More
+- **Frontend Framework:** Next.js (App Router)
+- **Language:** JavaScript (ES6+)
+- **Styling:** Tailwind CSS
+- **UI Enhancements:**
+  - Framer Motion (animations)
+  - Animate.css
+- **Authentication:** Better Auth
+- **Database:** MongoDB
+- **State Management:** React Context API
+- **Form Handling:** React Hook Form
+- **Notifications:** React Toastify
+- **Icons:** React Icons
+- **Image Optimization:** Next.js Image Component
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🔐 Authentication System
 
-## Deploy on Vercel
+- Email & Password Login/Register
+- Google Social Login
+- Secure session management
+- Protected routes (Profile & Course Details)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📚 Course Management
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Browse all courses
+- View course details dynamically
+- Search courses by title
+- View popular and new release courses
+
+### 🎯 Enrollment System
+
+- Enroll in courses
+- Prevent duplicate enrollment
+- Unenroll functionality
+- View enrolled courses in profile
+
+### 👤 User Profile
+
+- View user information
+- Edit profile (name & image)
+- Display enrolled courses
+
+### 🎨 UI/UX Features
+
+- Fully responsive design
+- Smooth animations (Framer Motion)
+- Scroll progress indicator
+- Video hero section
+- Modern card-based UI
+
+### ⚡ Performance & Optimization
+
+- Server-side data fetching
+- Dynamic metadata for SEO
+- Optimized images using Next.js Image
+- Loading and error handling pages
+
+### 🧭 Navigation
+
+- Responsive navbar
+- Mobile-friendly menu
+- Active route highlighting
+
+---
