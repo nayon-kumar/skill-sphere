@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "SkillSphere",
+  title: "SkillSphere - Home",
   description: "Online Learning Platform",
 };
 

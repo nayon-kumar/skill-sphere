@@ -3,6 +3,11 @@ import MyContainer from "@/components/MyContainer/MyContainer";
 import CourseCard from "@/ui/CourseCard";
 import { FaBookReader } from "react-icons/fa";
 
+export const metadata = {
+  title: "All Coursers",
+  description: "Our All Coursers",
+};
+
 const getData = async () => {
   const res = await fetch("https://skill-sphere-pi-inky.vercel.app/data.json", {
     cache: "no-store",

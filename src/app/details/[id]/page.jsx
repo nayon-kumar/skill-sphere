@@ -10,6 +10,17 @@ const getData = async () => {
   return res.json();
 };
 
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const allData = await getData();
+  const course = allData.find((singleData) => singleData.id == id);
+
+  return {
+    title: course.title,
+    description: course.description,
+  };
+}
+
 const CourseDetailsPage = async ({ params }) => {
   const { id } = await params;
   const allData = await getData();
