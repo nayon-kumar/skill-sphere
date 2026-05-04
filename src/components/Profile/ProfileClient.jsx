@@ -130,6 +130,9 @@ const ProfileClient = () => {
                   type="text"
                   className="input w-full"
                 />
+                {errors.image && (
+                  <p className="text-red-500">{errors.image.message}</p>
+                )}
 
                 <div className="flex justify-end gap-4">
                   <button
